@@ -12,6 +12,8 @@ Al iniciar cualquier infraestructura en la nube, los dos riesgos más críticos 
 * **AWS IAM (Identity and Access Management):** Gestión de identidades y políticas de acceso.
 * **AWS Budgets:** Monitoreo de costos y alertas de facturación.
 * **MFA (Multi-Factor Authentication):** Capa de seguridad adicional.
+* 
+![Evidencia MFA](screenshots/MFA.png)
 
 ## 🚀 Implementación Técnica
 
