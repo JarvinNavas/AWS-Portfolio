@@ -13,10 +13,10 @@ Al iniciar cualquier infraestructura en la nube, los dos riesgos más críticos 
 * **AWS Budgets:** Monitoreo de costos y alertas de facturación.
 * **MFA (Multi-Factor Authentication):** Capa de seguridad adicional.
   
-
+![Evidencia MFA](screenshots/MFA2.png)
 
 ## 🚀 Implementación Técnica
-![Evidencia MFA](screenshots/MFA.png)
+
 ### 1. Fortalecimiento de la Cuenta Raíz (MFA)
 El usuario raíz tiene acceso ilimitado a todos los recursos y facturación. Para protegerlo, se activó la autenticación multifactor (MFA), lo que requiere un dispositivo físico/virtual secundario para iniciar sesión, neutralizando ataques de phishing de contraseñas.
 
