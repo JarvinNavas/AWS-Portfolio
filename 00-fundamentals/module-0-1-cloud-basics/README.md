@@ -19,20 +19,20 @@ Al iniciar cualquier infraestructura en la nube, los dos riesgos más críticos 
 El usuario raíz tiene acceso ilimitado a todos los recursos y facturación. Para protegerlo, se activó la autenticación multifactor (MFA), lo que requiere un dispositivo físico/virtual secundario para iniciar sesión, neutralizando ataques de phishing de contraseñas.
 
 ![Evidencia MFA](screenshots/MFA.png)
-*(Nota: Asegurar que el ID de la cuenta esté oculto por seguridad)*
+
 
 ### 2. Gestión de Identidad (IAM User)
 Siguiendo el principio de seguridad de **no utilizar la cuenta raíz para tareas cotidianas**, se creó un usuario IAM dedicado con permisos de Administrador (`AdministratorAccess`).
 * **Por qué:** Permite trazabilidad (logs) de quién hace qué cambios y permite revocar acceso sin comprometer la cuenta entera.
 
-![Usuario IAM](screenshots/tu-foto-iam.png)
+![Usuario IAM](screenshots/IAM-Users.png)
 
 ### 3. Control de Costos (AWS Budgets)
 Se configuró una alarma de presupuesto de "Cero Gasto" (Zero Spend Budget).
 * **Configuración:** Alerta vía email si el costo pronosticado supera $0.01 USD.
 * **Beneficio:** Permite reacción inmediata ante recursos olvidados (ej: una instancia EC2 encendida) antes de que generen una factura significativa.
 
-![AWS Budgets](screenshots/tu-foto-budget.png)
+![AWS Budgets](screenshots/Budget.png)
 
 ## 💡 Conclusiones y Aprendizaje
 Este laboratorio sentó las bases operativas de la cuenta. Aprendí que la seguridad en la nube es responsabilidad compartida y que la configuración proactiva de alertas de facturación es el primer paso obligatorio antes de desplegar cualquier recurso computacional.
