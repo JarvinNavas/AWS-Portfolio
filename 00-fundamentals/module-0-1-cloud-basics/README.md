@@ -18,8 +18,8 @@ Al iniciar cualquier infraestructura en la nube, los dos riesgos más críticos 
 ### 1. Fortalecimiento de la Cuenta Raíz (MFA)
 El usuario raíz tiene acceso ilimitado a todos los recursos y facturación. Para protegerlo, se activó la autenticación multifactor (MFA), lo que requiere un dispositivo físico/virtual secundario para iniciar sesión, neutralizando ataques de phishing de contraseñas.
 
-![Evidencia MFA](screenshots/MFA.png)
-a
+
+
 
 ### 2. Gestión de Identidad (IAM User)
 Siguiendo el principio de seguridad de **no utilizar la cuenta raíz para tareas cotidianas**, se creó un usuario IAM dedicado con permisos de Administrador (`AdministratorAccess`).
