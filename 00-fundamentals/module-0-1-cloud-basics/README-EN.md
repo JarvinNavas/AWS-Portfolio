@@ -25,7 +25,7 @@ The root user has unlimited access. To protect it, Multi-Factor Authentication (
 Following the security principle of **not using the root account for daily tasks**, a dedicated IAM user with `AdministratorAccess` was created.
 * **Why:** It enables activity logging (CloudTrail) and allows access revocation without compromising the entire account.
 
-![IAM User](screenshots/IAM-users.png)
+![IAM User](screenshots/IAM-Users.png)
 
 ### 3. Cost Control (AWS Budgets)
 A "Zero Spend Budget" alarm was configured.
