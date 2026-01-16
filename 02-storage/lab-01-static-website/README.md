@@ -22,7 +22,7 @@ Created a unique S3 bucket in the `us-east-1` region.
 Enabled the S3 static website hosting feature, transforming the storage bucket into a web server endpoint.
 
 ![Configuration](screenshots/s3-config.png)
-*(Screenshot of the Properties tab showing Static Website Hosting enabled)*
+
 Also you can see the webiste in the browser
 ![Configuration](screenshots/aws-static.png)
 ### 3. Permissions Management (Bucket Policy)
