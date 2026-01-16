@@ -32,7 +32,7 @@ Instead of manually installing software, I injected a Bash script into the **Use
 2.  Install the Apache Web Server (`httpd`).
 3.  Start and enable the service.
 4.  Deploy a custom HTML landing page.
-
+![Security Group Config](screenshots/website.png)
 ```bash
 #!/bin/bash
 yum update -y
@@ -41,4 +41,4 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Automated Setup</h1>" > /var/www/html/index.html
 
-![Security Group Config](screenshots/website.png)
+
