@@ -24,8 +24,7 @@ Configured a Security Group to filter traffic:
 * **Port 22 (SSH):** Restricted to my personal IP address for administration.
 * **Port 80 (HTTP):** Open to `0.0.0.0/0` (Anywhere) to serve web traffic to users.
 
-![Security Group Config](screenshots/ec2-security-group.png)
-*(Screenshot of the Network Settings showing allowed ports)*
+![Security Group Config](screenshots/firewall.png)
 
 ### 3. Bootstrapping (User Data)
 Instead of manually installing software, I injected a Bash script into the **User Data** field. This script ran automatically upon first boot to:
@@ -41,3 +40,5 @@ yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
 echo "<h1>Automated Setup</h1>" > /var/www/html/index.html
+
+![Security Group Config](screenshots/website.png)
