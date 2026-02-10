@@ -21,7 +21,7 @@ I implemented AWS S3 Object Lock to enforce a "Write Once, Read Many" model.
 I enabled the "Block Public Access" setting at the bucket level.
 * **ACLs:** Disabled (Modern approach).
 * **Policy:** All public access points (new and existing) are blocked.
-![Evidencia Bloqueo](evidence/block-public-access.png.png)
+![Evidencia Bloqueo](evidence/block-public-access.png)
 
 ### 3. Data Resilience Features
 * **Versioning:** Enabled. Acts as a backup mechanism for accidental deletions.
