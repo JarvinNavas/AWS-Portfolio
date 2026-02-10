@@ -15,13 +15,13 @@ I implemented AWS S3 Object Lock to enforce a "Write Once, Read Many" model.
 * **Mode:** Governance Mode.
 * **Retention Period:** 1 Day (Pilot phase).
 * **Impact:** Objects committed to this bucket cannot be overwritten or deleted by any user (including the root user, unless specific bypass permissions are used) for 24 hours. This creates a safe buffer for incident response.
-* *Evidence:* `evidence/object-lock-retention-rules.`
+![Evidencia WORM](evidence/object-lock-retention-rules.png)
 
 ### 2. Perimeter Security (Block Public Access)
 I enabled the "Block Public Access" setting at the bucket level.
 * **ACLs:** Disabled (Modern approach).
 * **Policy:** All public access points (new and existing) are blocked.
-* *Evidence:* `evidence/block-public-access`
+![Evidencia Bloqueo](evidence/block-public-access.png)
 
 ### 3. Data Resilience Features
 * **Versioning:** Enabled. Acts as a backup mechanism for accidental deletions.
