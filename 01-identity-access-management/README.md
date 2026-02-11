@@ -46,17 +46,3 @@ During the setup, I analyzed AWS JSON policy structures to understand the anatom
         }
     ]
 }
-
-### 5. Skills
-I identified that while necessary for initial setup, the AdministratorAccess policy violates the Principle of Least Privilege and should be restricted in production environments.
-
-🛠️ Skills Demonstrated
-AWS IAM: User, Group, and Policy management.
-
-Security Hardening: MFA implementation and Root account protection.
-
-Compliance: Password complexity enforcement.
-
-Access Control: RBAC principles.
-
-Module completed by: Jarvin Navas
