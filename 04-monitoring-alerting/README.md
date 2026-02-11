@@ -28,7 +28,5 @@ An alarm was configured to detect thresholds indicative of a brute-force attack:
 
 ### 4. Notification System
 An email subscription was set up to receive immediate alerts. Below is the evidence of a successful simulation (Self-Attack):
-
-
 ---
 *Module completed by: Jarvin Navas*
