@@ -21,3 +21,13 @@ I created a custom customer-managed policy (`S3-Hardened-MFA-Policy`) with the f
         "aws:MultiFactorAuthPresent": "false"
     }
 }
+2. Evidence of Protection
+First, I attempted to delete a file using valid credentials but without an active MFA session token. AWS correctly blocked the request.
+
+3. Successful Validation
+After authenticating with the MFA device (updating the session token), the Condition was satisfied, and the deletion was permitted.
+
+🛡️ Value Added
+This configuration ensures that even if an attacker steals long-term credentials (password or access keys), they cannot perform irreversible actions without physical access to the MFA device.
+
+Module completed by: Jarvin Navas
