@@ -23,7 +23,7 @@ A strict password policy was configured to prevent brute-force attacks and crede
 * **Rotations:** Users are permitted to change their own passwords.
 
 ![Password Policy Evidence](evidence/password-policy.png)
-*(Note: Ensure your screenshot file name matches this path)*
+
 
 ### 3. Role-Based Access Control (RBAC) Architecture
 Instead of attaching the `AdministratorAccess` policy directly to a user (which is an anti-pattern), I created a managed group structure:
@@ -46,6 +46,7 @@ During the setup, I analyzed AWS JSON policy structures to understand the anatom
         }
     ]
 }
+´´´
 I identified that while necessary for initial setup, the AdministratorAccess policy violates the Principle of Least Privilege and should be restricted in production environments.
 
 🛠️ Skills Demonstrated
