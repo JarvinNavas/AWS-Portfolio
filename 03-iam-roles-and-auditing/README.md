@@ -14,7 +14,7 @@ In this module, I implemented **IAM Roles** for machine-to-machine authenticatio
 ### 1. Identity Auditing (Credential Report)
 I generated a centralized IAM Credential Report. This CSV file acts as an essential compliance artifact, providing a snapshot of all users, their password age, MFA status, and active Access Keys. This allows the security team to enforce credential rotation policies.
 
-![IAM Credential Report](evidence/credential-report.png)
+![IAM Credential Report](evidence/credentil-report.png)
 
 ### 2. Machine Identities (IAM Roles)
 To secure server access, I created an IAM Role (`EC2-S3-ReadOnly-Role`) specifically designed for EC2 instances. 
