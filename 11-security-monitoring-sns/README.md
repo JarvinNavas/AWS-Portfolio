@@ -1,30 +1,26 @@
-# Module 11: Security Monitoring & Incident Response (SOC) 🚨
+# Module 11: Security Monitoring & Threat Hunting (SOC) 🚨
 
 ## 📋 Scenario
-A foundational rule of Cloud Security is that the AWS Root account must never be used for daily tasks. If a login event occurs using the Root credentials, it indicates either a severe policy violation by an internal employee or an active compromise by an external threat actor. Immediate notification is critical.
+A foundational rule of Cloud Security is that the AWS Root account must never be used for daily tasks. If a login event occurs using the Root credentials, it indicates either a severe policy violation by an internal employee or an active compromise by an external threat actor. 
 
 ## 🎯 Objectives
-* **Real-time Threat Detection:** Implement a monitoring architecture to detect unauthorized high-privileged access.
-* **Automated Alerting:** Route critical security events to an incident response team (via email/SMS) with near-zero latency.
+* **Automated Alerting:** Configure EventBridge and SNS to route critical security events to an incident response team.
+* **Threat Hunting:** Manually audit and query AWS CloudTrail to track down specific unauthorized access events when automated systems experience delays or filter drops.
 
 ## ⚙️ Implementation Details & Evidence
 
-### 1. The Notification Engine (Amazon SNS)
-I established an Amazon Simple Notification Service (SNS) Topic named `Security-Alerts`. I configured an email subscription to act as the endpoint for our Incident Response team, ensuring they receive immediate push notifications.
+### 1. The Detection Logic (Amazon EventBridge & SNS)
+I deployed an EventBridge Rule configured with a custom JSON event pattern to act as a tripwire, filtering API calls for `"userIdentity": {"type": ["Root"]}` and pushing them to an SNS topic.
 
-### 2. The Detection Logic (Amazon EventBridge & CloudTrail)
-I deployed an EventBridge Rule (`Root-Login-Alert`) configured with a custom JSON event pattern. This rule acts as a tripwire, constantly filtering API calls logged by AWS CloudTrail. 
-The custom JSON explicitly filters for:
-* `"source": ["aws.signin"]`
-* `"userIdentity": {"type": ["Root"]}`
+### 2. Forensic Auditing (AWS CloudTrail)
+To validate the security posture and perform active Threat Hunting, I bypassed the automated alerting systems and queried the master API logs directly in **AWS CloudTrail**. 
+By filtering the management events for `Event name: ConsoleLogin`, I successfully isolated and identified the exact timestamps and source IPs of the Root user login events, proving the ability to trace an attacker's steps natively.
 
-When a match occurs, EventBridge automatically pushes the event payload to the SNS Topic.
-
-![EventBridge Root Alert Rule](evidence/eventbrigde-root-rule.png)
+![CloudTrail Root Login Audit](evidence/cloudtrail-root-login.png)
 
 ## 🛡️ Value Added
-* **Reduced MTTD (Mean Time To Detect):** Reduces the time it takes to discover a critical breach from months to mere seconds.
-* **Automated Incident Response:** Forms the foundation of a modern SOC (Security Operations Center), allowing security teams to focus on response rather than manual log parsing.
+* **Forensic Capabilities:** Demonstrates the ability to perform root-cause analysis and forensic investigations post-incident.
+* **Defense in Depth:** Combines automated tripwires with manual auditing skills, forming the foundation of a modern SOC (Security Operations Center) analyst.
 
 ---
 *Module completed by: Jarvin Navas*
