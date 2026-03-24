@@ -20,7 +20,7 @@ The custom JSON explicitly filters for:
 
 When a match occurs, EventBridge automatically pushes the event payload to the SNS Topic.
 
-![EventBridge Root Alert Rule](evidence/eventbridge-root-rule.png)
+![EventBridge Root Alert Rule](evidence/eventbrigde-root-rule.png)
 
 ## 🛡️ Value Added
 * **Reduced MTTD (Mean Time To Detect):** Reduces the time it takes to discover a critical breach from months to mere seconds.
