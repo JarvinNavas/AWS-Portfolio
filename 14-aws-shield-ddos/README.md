@@ -1,4 +1,4 @@
-# Module 15: DDoS Protection & Infrastructure Resilience (AWS Shield) 🛡️🌊
+# Module 14: DDoS Protection & Infrastructure Resilience (AWS Shield) 🛡️🌊
 
 ## 📋 Scenario
 Distributed Denial of Service (DDoS) attacks are designed to overwhelm applications by flooding them with massive amounts of illegitimate traffic. To maintain high availability, cloud infrastructure must have an always-on detection and mitigation layer that operates at the network and transport layers (Layers 3 and 4).
